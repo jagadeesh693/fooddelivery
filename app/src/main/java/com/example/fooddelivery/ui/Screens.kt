@@ -194,9 +194,17 @@ fun HomeScreen(vm: AppViewModel, onOpen: (String) -> Unit) {
 
     Column(Modifier.fillMaxSize()) {
         Text(
+            "QuickBite",
+            Modifier.padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 2.dp),
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.primary
+        )
+        Text(
             "What would you like to eat?",
-            Modifier.padding(16.dp, 16.dp, 16.dp, 8.dp),
-            style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold
+            Modifier.padding(start = 16.dp, end = 16.dp, bottom = 8.dp),
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
         OutlinedTextField(
             query, { query = it },
